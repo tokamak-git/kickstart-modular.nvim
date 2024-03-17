@@ -49,3 +49,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- [[ my keymaps ]]
+vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Better escape' })
+vim.keymap.set('n', '<leader>qq', ':qa<CR>', { desc = 'Quit neovim' })
+vim.keymap.set('n', '<leader>ww', ':w<CR>', { desc = 'Save current file' })
+vim.keymap.set('n', '<leader>wsp', ':sp<CR>', { desc = '[W]indow [S]plit' })
+vim.keymap.set('n', '<leader>wvs', ':vsp<CR>', { desc = '[W]indow vertical [S][P]lit' })
+vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
+
+-- buffer mappings
+vim.keymap.set('n', '<leader>bc', '<cmd>BufferClose<CR>', { desc = '[B]uffer[C]lose' })
+vim.keymap.set('n', '<leader>bca', '<cmd>BufferCloseAllButPinned<CR>', { desc = '[B]uffer[C]lose[A]llButPinned' })
+
+vim.keymap.set('i', '<C-;>', '<Esc><C-a>;i', { desc = '[B]uffer[C]lose[A]llButPinned' })

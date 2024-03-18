@@ -9,7 +9,7 @@ local o = {
 }
 
 o.keys = { -- Example mapping to toggle outline
-  { '<leader>o', '<cmd>Outline!<CR>', desc = 'Toggle [O]utline' },
+  { '<leader>o', '<cmd>Outline<CR>', desc = 'Toggle [O]utline' },
 }
 
 return o

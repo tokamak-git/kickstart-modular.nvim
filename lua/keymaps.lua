@@ -52,10 +52,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ my keymaps ]]
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Better escape' })
-vim.keymap.set('n', '<leader>qq', ':qa<CR>', { desc = 'Quit neovim' })
-vim.keymap.set('n', '<leader>ww', ':w<CR>', { desc = 'Save current file' })
-vim.keymap.set('n', '<leader>wsp', ':sp<CR>', { desc = '[W]indow [S]plit' })
-vim.keymap.set('n', '<leader>wvs', ':vsp<CR>', { desc = '[W]indow vertical [S][P]lit' })
+vim.keymap.set('n', '<C-q>', ':qa<CR>', { desc = 'Quit neovim' })
+vim.keymap.set('n', '<C-w>', ':w<CR>', { desc = 'Save current file' })
+vim.keymap.set('n', '<leader>sp', ':sp<CR>', { desc = '[W]indow [S]plit' })
+vim.keymap.set('n', '<leader>vs', ':vsp<CR>', { desc = '[W]indow vertical [S][P]lit' })
 vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
 
 -- buffer mappings
@@ -63,3 +63,13 @@ vim.keymap.set('n', '<leader>bc', '<cmd>BufferClose<CR>', { desc = '[B]uffer[C]l
 vim.keymap.set('n', '<leader>bca', '<cmd>BufferCloseAllButPinned<CR>', { desc = '[B]uffer[C]lose[A]llButPinned' })
 
 vim.keymap.set('i', '<C-;>', '<Esc><C-a>;i', { desc = '[B]uffer[C]lose[A]llButPinned' })
+
+vim.api.nvim_set_keymap('n', '<leader>ta', ':$tabnew<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>to', ':tabonly<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>tn', ':tabn<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>tp', ':tabp<CR>', { noremap = true })
+-- move current tab to previous position
+vim.api.nvim_set_keymap('n', '<leader>tmp', ':-tabmove<CR>', { noremap = true })
+-- move current tab to next position
+vim.api.nvim_set_keymap('n', '<leader>tmn', ':+tabmove<CR>', { noremap = true })

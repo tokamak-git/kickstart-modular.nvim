@@ -10,7 +10,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- This sets status column with absalute and relateive nubers, neovim for the win
-vim.o.statuscolumn = '%s %l %r %C'
+vim.o.statuscolumn = '%l %r %C %s'
 
 -- enable nerd fonts
 vim.g.have_nerd_font = true
@@ -20,6 +20,9 @@ vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in status line
 vim.opt.showmode = false
+
+-- Always show tabline
+vim.o.showtabline = 2
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -65,4 +68,6 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 30
 
+-- suggested by tabby to save sessions with more detail
+vim.opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'
 -- vim: ts=2 sts=2 sw=2 et

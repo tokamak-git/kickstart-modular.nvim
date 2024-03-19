@@ -3,8 +3,9 @@ return {
   opts = {
     -- Project directories
     projects = {
-      '~/go/src/github.com/tokamak-git/*',
-      '~/go/src/github.com/bhumi-sh/*',
+      '~/go/src/github.com/*/*',
+      -- '~/go/src/github.com/tokamak-git/*',
+      -- '~/go/src/github.com/bhumi-sh/*',
       '~/Projects/*',
       '~/.config/nvim',
       '~/Projects/advent-of-code/*',

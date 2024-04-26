@@ -51,16 +51,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- [[ my keymaps ]]
--- vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Better escape' }) -- modified layout to compensate for this
+-- vim.keymap.set('i', 'jj', '<Esc>', { desc =d 'Better escape' }) -- modified layout to compensate for this
 vim.keymap.set('n', '<C-q>', ':qa<CR>', { desc = 'Quit neovim' })
 vim.keymap.set('n', '<C-w>', ':w<CR>', { desc = 'Save current file' })
-vim.keymap.set('n', '<leader>sp', ':sp<CR>', { desc = '[W]indow [S]plit' })
-vim.keymap.set('n', '<leader>vs', ':vsp<CR>', { desc = '[W]indow vertical [S][P]lit' })
+-- vim.keymap.set('n', '<leader>sp', ':sp<CR>', { desc = '[W]indow [S]plit' })
+-- vim.keymap.set('n', '<leader>vs', ':vsp<CR>', { desc = '[W]indow vertical [S][P]lit' })
 vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
 
 -- buffer mappings
-vim.keymap.set('n', '<leader>bc', '<cmd>BufferClose<CR>', { desc = '[B]uffer[C]lose' })
-vim.keymap.set('n', '<leader>bca', '<cmd>BufferCloseAllButPinned<CR>', { desc = '[B]uffer[C]lose[A]llButPinned' })
+vim.keymap.set('n', '<leader>bc', ':bp<bar>bd#<CR>', { desc = '[B]uffer[C]lose' })
+-- vim.keymap.set('n', '<leader>bca', '<cmd>BufferCloseAllButPinned<CR>', { desc = '[B]uffer[C]lose[A]llButPinned' })
+vim.keymap.set('n', '<leader>ba', '<cmd>BufferCloseAllButPinned<CR>', { desc = '[B]uffer[C]lose[A]llButPinned' })
 
 vim.keymap.set('i', '<Alt-;>', '<Esc>A;', { desc = '[B]uffer[C]lose[A]llButPinned' })
 

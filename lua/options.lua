@@ -71,3 +71,7 @@ vim.opt.scrolloff = 30
 -- suggested by tabby to save sessions with more detail
 vim.opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'
 -- vim: ts=2 sts=2 sw=2 et
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.bo.softtabstop = 2

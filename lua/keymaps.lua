@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- [[ my keymaps ]]
-vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Better escape' })
+-- vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Better escape' }) -- modified layout to compensate for this
 vim.keymap.set('n', '<C-q>', ':qa<CR>', { desc = 'Quit neovim' })
 vim.keymap.set('n', '<C-w>', ':w<CR>', { desc = 'Save current file' })
 vim.keymap.set('n', '<leader>sp', ':sp<CR>', { desc = '[W]indow [S]plit' })
@@ -62,7 +62,7 @@ vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
 vim.keymap.set('n', '<leader>bc', '<cmd>BufferClose<CR>', { desc = '[B]uffer[C]lose' })
 vim.keymap.set('n', '<leader>bca', '<cmd>BufferCloseAllButPinned<CR>', { desc = '[B]uffer[C]lose[A]llButPinned' })
 
-vim.keymap.set('i', '<C-;>', '<Esc><C-a>;i', { desc = '[B]uffer[C]lose[A]llButPinned' })
+vim.keymap.set('i', '<Alt-;>', '<Esc>A;', { desc = '[B]uffer[C]lose[A]llButPinned' })
 
 vim.api.nvim_set_keymap('n', '<leader>ta', ':$tabnew<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
@@ -73,3 +73,5 @@ vim.api.nvim_set_keymap('n', '<leader>tp', ':tabp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>tmp', ':-tabmove<CR>', { noremap = true })
 -- move current tab to next position
 vim.api.nvim_set_keymap('n', '<leader>tmn', ':+tabmove<CR>', { noremap = true })
+
+vim.api.nvim_set_keymap('i', '<Alt-a>', '<ESC>A', { noremap = true })

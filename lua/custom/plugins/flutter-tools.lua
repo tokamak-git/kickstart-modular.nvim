@@ -1,4 +1,4 @@
-local flutter = {
+local f = {
   'akinsho/flutter-tools.nvim',
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -6,12 +6,15 @@ local flutter = {
   },
   config = true,
 }
-flutter.keys = {
-  { '<leader>fr', ':FlutterRun<CR>', desc = '[F]lutter [R]un' },
-  { '<leader>fd', ':FlutterDevices<CR>', desc = '[F]lutter [D]evices' },
-  { '<leader>fe', ':FlutterEmulators<CR>', desc = '[F]lutter [E]mulators' },
-  { '<leader>fre', ':FlutterReload<CR>', desc = '[F]lutter [R]eload fre' },
-  { '<leader>fR', ':FlutterReload<CR>', desc = '[F]lutter [R]eload fR' },
+f.keys = {
+  f = {
+    name = 'flutter',
+    r = { ':FlutterRun<CR>', desc = '[F]lutter [R]un' },
+    d = { ':FlutterDevices<CR>', desc = '[F]lutter [D]evices' },
+    e = { ':FlutterEmulators<CR>', desc = '[F]lutter [E]mulators' },
+    re = { ':FlutterReload<CR>', desc = '[F]lutter [R]eload' },
+    R = { ':FlutterReload<CR>', desc = '[F]lutter [R]eload' },
+  },
 }
 
-return flutter
+return f

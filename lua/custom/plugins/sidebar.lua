@@ -1,5 +1,6 @@
 local sidebar = {
   'sidebar-nvim/sidebar.nvim',
+  lazy = false,
   opts = {
     open = true,
     sections = { 'todos', 'diagnostics', 'symbols' },
@@ -10,7 +11,7 @@ local sidebar = {
       bindings = nil,
       open = true,
       side = 'left',
-      -- initial_width = 35,
+      initial_width = 35,
       size = 35,
       hide_statusline = true,
       update_interval = 1000,

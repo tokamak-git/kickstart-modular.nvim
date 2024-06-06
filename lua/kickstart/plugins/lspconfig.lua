@@ -140,7 +140,16 @@ return {
         cucumber_language_server = {},
         docker_compose_language_service = {},
         dockerls = {},
-        gopls = {},
+        gopls = {
+          analyses = {
+            unusedparams = true,
+          },
+          staticcheck = true,
+          gofumpt = true,
+          semanticTokens = true,
+          usePlaceholders = true,
+          vulncheck = true,
+        },
         helm_ls = {},
         htmx = {},
         jqls = {},

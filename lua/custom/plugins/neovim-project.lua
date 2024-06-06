@@ -10,6 +10,7 @@ return {
       '~/.config/nvim',
       '~/Projects/advent-of-code/*',
       '~/Projects/exercism/gleam/*',
+      '~/Projects/go/src/*/*/*',
       '~/Projects/rust/*',
       '~/Projects/rust/autogpt/*',
     },

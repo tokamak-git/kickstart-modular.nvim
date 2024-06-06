@@ -4,8 +4,14 @@ local f = {
     'nvim-lua/plenary.nvim',
     'stevearc/dressing.nvim',
   },
-  lazy = true,
-  config = true,
+  -- lazy = true,
+  lazy = false,
+  -- config = true,
+  config = function()
+    require('flutter-tools').setup {
+      flutter_path = '/home/tokamak/snap/flutter/common/flutter/bin/flutter',
+    }
+  end,
   keys = {
     { '<leader>fr', ':FlutterRun<CR>', desc = '[F]lutter [R]un' },
     { '<leader>fd', ':FlutterDevices<CR>', desc = '[F]lutter [D]evices' },

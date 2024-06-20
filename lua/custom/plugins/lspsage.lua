@@ -1,6 +1,3 @@
-if true then
-  return {}
-end
 return {
   'nvimdev/lspsaga.nvim',
   config = function()

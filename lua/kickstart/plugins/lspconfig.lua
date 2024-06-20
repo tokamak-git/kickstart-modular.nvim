@@ -1,4 +1,4 @@
-return {
+local l = {
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -157,6 +157,10 @@ return {
         pyright = {},
         rust_analyzer = {},
         sqls = {},
+        -- snyk_ls = {
+        --   path = '/home/tokamak/.local/bin/snyk',
+        -- },
+        terraformls = {},
         yamlls = {},
         zls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -196,6 +200,32 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format lua code
+        -- you can pin a tool to a particular version
+        { 'golangci-lint', version = 'v1.47.0' },
+
+        -- you can turn off/on auto_update per tool
+        { 'bash-language-server', auto_update = true },
+
+        'lua-language-server',
+        'vim-language-server',
+        'gopls',
+        'shellcheck',
+        'editorconfig-checker',
+        'gofumpt',
+        'golines',
+        'gomodifytags',
+        'gotests',
+        'impl',
+        'json-to-struct',
+        -- 'luacheck',
+        'misspell',
+        'revive',
+        'shellcheck',
+        'shfmt',
+        'staticcheck',
+        -- 'synk',
+        -- 'synk-ls',
+        -- 'vint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -215,3 +245,4 @@ return {
   },
 }
 -- vim: ts=2 sts=2 sw=2 et
+return l

@@ -1,4 +1,7 @@
-return {
+if true then
+  return {}
+end
+local np = {
   'coffebar/neovim-project',
   opts = {
     -- Project directories
@@ -7,12 +10,10 @@ return {
       -- '~/go/src/github.com/tokamak-git/*',
       -- '~/go/src/github.com/bhumi-sh/*',
       '~/Projects/*',
+      '~/Projects/bhumi-clients/*/*',
       '~/.config/nvim',
       '~/Projects/advent-of-code/*',
       '~/Projects/exercism/gleam/*',
-      '~/Projects/go/src/*/*/*',
-      '~/Projects/rust/*',
-      '~/Projects/rust/autogpt/*',
     },
     -- Path to store history and sessions
     datapath = vim.fn.stdpath 'data', -- ~/.local/share/nvim/
@@ -38,7 +39,7 @@ return {
   },
   init = function()
     -- enable saving the state of plugins in the session
-    vim.opt.sessionoptions:append 'globals' -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
+    -- vim.opt.sessionoptions:append 'globals' -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
   end,
   dependencies = {
     { 'nvim-lua/plenary.nvim' },
@@ -65,3 +66,5 @@ return {
   lazy = false,
   priority = 100,
 }
+
+return np

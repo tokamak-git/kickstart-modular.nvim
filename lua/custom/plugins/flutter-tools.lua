@@ -4,9 +4,7 @@ local f = {
     'nvim-lua/plenary.nvim',
     'stevearc/dressing.nvim',
   },
-  -- lazy = true,
   lazy = false,
-  -- config = true,
   config = function()
     require('flutter-tools').setup {
       flutter_path = '/home/tokamak/snap/flutter/common/flutter/bin/flutter',
@@ -18,6 +16,7 @@ local f = {
     { '<leader>fe', ':FlutterEmulators<CR>', desc = '[F]lutter [E]mulators' },
     -- { '<leader>fre', ':FlutterReload<CR>', desc = '[F]lutter [R]eload fre' },
     { '<leader>fR', ':FlutterReload<CR>', desc = '[F]lutter [R]eload FR' },
+    { '<leader>fl', ':Telescope flutter commands<CR>', desc = '[F][l]utter Telescope Menu' },
   },
   debugger = {
     enabled = true,

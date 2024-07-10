@@ -1,6 +1,3 @@
-if true then
-  return {}
-end
 local np = {
   'coffebar/neovim-project',
   opts = {
@@ -18,7 +15,8 @@ local np = {
     -- Path to store history and sessions
     datapath = vim.fn.stdpath 'data', -- ~/.local/share/nvim/
     -- Load the most recent session on startup if not in the project directory
-    last_session_on_startup = true,
+    -- last_session_on_startup = false,
+    last_session_on_startup = false,
 
     -- Overwrite some of Session Manager options
     session_manager_opts = {
@@ -68,3 +66,4 @@ local np = {
 }
 
 return np
+-- return {}

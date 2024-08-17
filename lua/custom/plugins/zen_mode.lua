@@ -1,11 +1,11 @@
 -- Lua
-return {
+local z = {
   'folke/zen-mode.nvim',
-  keys = { {
-    '<leader>z',
-    '<cmd>ZenMode<cr>',
-    desc = 'Toggle [Z]en mode',
-  } },
+  -- keys = { {
+  --   '<leader>z',
+  --   '<cmd>ZenMode<cr>',
+  --   desc = 'Toggle [Z]en mode',
+  -- } },
 
   opts = {
     -- your configuration comes here
@@ -78,3 +78,6 @@ return {
     on_close = function() end,
   },
 }
+
+return {}
+-- return z

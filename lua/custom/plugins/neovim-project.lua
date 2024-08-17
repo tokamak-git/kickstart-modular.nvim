@@ -7,6 +7,7 @@ local np = {
       -- '~/go/src/github.com/tokamak-git/*',
       -- '~/go/src/github.com/bhumi-sh/*',
       '~/Projects/*',
+      '~/Projects/dotfiles/*',
       '~/Projects/bhumi-clients/*/*',
       '~/.config/nvim',
       '~/Projects/advent-of-code/*',

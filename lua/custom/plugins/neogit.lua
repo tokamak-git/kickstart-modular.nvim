@@ -11,9 +11,9 @@ return {
   config = true,
   keys = {
     {
-      '<leader>gg',
-      '<cmd>Neogit<cr>',
-      desc = 'Neogit',
+      '<leader>ng',
+      ':Neogit<CR>',
+      desc = 'neogit',
     },
   },
 }

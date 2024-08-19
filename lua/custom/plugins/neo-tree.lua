@@ -1,6 +1,6 @@
 -- File: lua/custom/plugins/filetree.lua
 
-return {
+local n = {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
   dependencies = {
@@ -15,3 +15,6 @@ return {
     { '<leader>e', ':Neotree toggle<CR>', desc = 'Toggle Neotree' },
   },
 }
+
+return {}
+-- return n

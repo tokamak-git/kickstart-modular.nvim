@@ -2,9 +2,9 @@ local ll = {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
--- Bubbles config for lualine
--- Author: lokesh-krishna
--- MIT license, see LICENSE for more details.
+    -- Bubbles config for lualine
+    -- Author: lokesh-krishna
+    -- MIT license, see LICENSE for more details.
 
 -- stylua: ignore
 local colors = {
@@ -48,7 +48,7 @@ local colors = {
           '%=', --[[ add your center compoentnts here in place of this comment ]]
         },
         -- lualine_x = { require('pomodoro').statusline },
-        lualine_x = {},
+        lualine_x = { M.super },
         lualine_y = { 'filetype', 'progress' },
         lualine_z = {
           { 'location', separator = { right = '' }, left_padding = 2 },
@@ -91,4 +91,5 @@ local colors = {
     }
   end,
 }
+
 return ll

@@ -12,9 +12,9 @@ local n = {
     require('neo-tree').setup {}
   end,
   keys = {
-    { '<leader>e', ':Neotree toggle<CR>', desc = 'Toggle Neotree' },
+    { '<leader>z', ':Neotree toggle<CR>', desc = 'Toggle Neotree' },
   },
 }
 
-return {}
--- return n
+-- return {}
+return n

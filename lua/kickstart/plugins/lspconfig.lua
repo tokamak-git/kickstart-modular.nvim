@@ -149,6 +149,7 @@ local l = { -- LSP Configuration & Plugins
         usePlaceholders = true,
         vulncheck = true,
       },
+      jedi_language_server = {},
       helm_ls = {},
       htmx = {},
       jqls = {},
@@ -180,6 +181,11 @@ local l = { -- LSP Configuration & Plugins
         },
       },
     }
+
+    -- -- gleam setup for lspconfig. seeing as it is not currently supported by mason
+    -- local lspconfig = require('nvim-lspconfig")
+    -- lspconfig.gleam.setup({})
+    require('lspconfig').gleam.setup {}
 
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install
@@ -216,6 +222,7 @@ local l = { -- LSP Configuration & Plugins
       'shellcheck',
       'shfmt',
       'staticcheck',
+      'yamlfix',
       -- 'synk',
       -- 'synk-ls',
       -- 'vint',
